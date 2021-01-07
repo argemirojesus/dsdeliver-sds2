@@ -9,6 +9,7 @@
 		<version>2.4.1</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
+	
 	<groupId>com.myapp</groupId>
 	<artifactId>dsdelivery</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -60,5 +61,14 @@
 		</dependency>
 
 	</dependencies>
+	
+		<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
