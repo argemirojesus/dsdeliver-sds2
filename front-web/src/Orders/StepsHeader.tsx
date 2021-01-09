@@ -1,4 +1,4 @@
-
+import './style.css';
 function StepHeader(){
 return(
         <header className="orders-steps-container">
