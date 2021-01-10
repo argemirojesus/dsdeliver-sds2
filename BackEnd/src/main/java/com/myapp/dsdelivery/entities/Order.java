@@ -36,6 +36,7 @@ public class Order implements Serializable{
 	joinColumns = @JoinColumn(name = "order_id"),
 	inverseJoinColumns = @JoinColumn(name = "product_id"))
 	private Set<Product> products = new HashSet<>();
+	
 
 	public Order() {
 	}
@@ -101,6 +102,15 @@ public class Order implements Serializable{
 	public Set<Product> getProducts() {
 		return products;
 	}
+	
+	public Double getTotal() {
+		double sum =0.0;
+		for (Product p: products) {
+			sum += p.getPrice();
+		}
+		return sum;		
+	}
+	
 
 	@Override
 	public int hashCode() {
